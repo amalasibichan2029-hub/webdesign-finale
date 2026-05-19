@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Booking Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+header{
+    background:linear-gradient(90deg,#4b0082,#8a2be2);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+}
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=1200')
+    no-repeat center center/cover;
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:5px;
+    font-size:18px;
+}
+
+.btn:hover{
+    background:#e68900;
+}
+
+.reviews{
+    padding:60px 20px;
+    background:#eef2f7;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+    color:#4b0082;
+}
+
+.review-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.review-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.stars{
+    color:gold;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#4b0082;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Event Booking Website</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <h1>Enjoy Amazing Events</h1>
+
+    <p>Book concerts, parties, food festivals and more</p>
+
+    <a href="events.html" class="btn">
+    Explore Events
+    </a>
+
+</div>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-container">
+
+    <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h3>Rahul</h3>
+        <p>
+        Very easy booking process and great event experience.
+        </p>
+    </div>
+
+    <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <h3>Anjali</h3>
+        <p>
+        Beautiful design and smooth ticket booking system.
+        </p>
+    </div>
+
+    <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <h3>Arun</h3>
+        <p>
+        Loved the DJ event and customer support.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Email: events@gmail.com</p>
+<p>Phone: +91 9876543210</p>
+<p>© 2026 Event Booking Website</p>
+
+</footer>
+
+</body>
+</html>
+```
+
+---
+
+# 2. events.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+header{
+    background:linear-gradient(90deg,#4b0082,#8a2be2);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:50px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+    color:#4b0082;
+}
+
+.events{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#4b0082;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    margin-bottom:10px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.btn:hover{
+    background:#e68900;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Upcoming Events</h1>
+</header>
+
+<section class="container">
+
+<h2 class="section-title">Book Your Favorite Event</h2>
+
+<div class="events">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200">
+<div class="card-content">
+<h3>Live Music Concert</h3>
+<p>Date: 15 June 2026</p>
+<p>Price: ₹499</p>
+<a href="booking.html?event=Live Music Concert" class="btn">Book Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200">
+<div class="card-content">
+<h3>Food Carnival</h3>
+<p>Date: 2 July 2026</p>
+<p>Price: ₹299</p>
+<a href="booking.html?event=Food Carnival" class="btn">Book Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200">
+<div class="card-content">
+<h3>DJ Party Night</h3>
+<p>Date: 10 August 2026</p>
+<p>Price: ₹699</p>
+<a href="booking.html?event=DJ Party Night" class="btn">Book Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200">
+<div class="card-content">
+<h3>Tech Conference</h3>
+<p>Date: 18 September 2026</p>
+<p>Price: ₹999</p>
+<a href="booking.html?event=Tech Conference" class="btn">Book Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200">
+<div class="card-content">
+<h3>Fashion Show</h3>
+<p>Date: 25 October 2026</p>
+<p>Price: ₹799</p>
+<a href="booking.html?event=Fashion Show" class="btn">Book Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1200">
+<div class="card-content">
+<h3>Comedy Night</h3>
+<p>Date: 5 November 2026</p>
+<p>Price: ₹399</p>
+<a href="booking.html?event=Comedy Night" class="btn">Book Now</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Page</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(120deg,#8a2be2,#4b0082);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.booking-form{
+    background:white;
+    width:400px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.booking-form h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4b0082;
+}
+
+.booking-form input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#e68900;
+}
+
+</style>
+</head>
+<body>
+
+<div class="booking-form">
+
+<h2>Book Event</h2>
+
+<form onsubmit="bookEvent(event)">
+
+<input type="text" id="name" placeholder="Enter Your Name" required>
+
+<input type="email" id="email" placeholder="Enter Your Email" required>
+
+<input type="text" id="eventName" placeholder="Selected Event" readonly>
+
+<input type="number" id="tickets" placeholder="Number of Tickets" required>
+
+<button type="submit" class="btn">
+Confirm Booking
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const eventName = params.get('event');
+
+document.getElementById('eventName').value = eventName;
+
+function bookEvent(e)
+{
+    e.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let event = document.getElementById('eventName').value;
+    let tickets = document.getElementById('tickets').value;
+
+    alert(
+    'Booking Successful!\n\n' +
+    'Name: ' + name +
+    '\nEvent: ' + event +
+    '\nTickets: ' + tickets
+    );
+
+    document.querySelector('form').reset();
+}
+
+</script>
+
+</body>
+</html>
+
+
